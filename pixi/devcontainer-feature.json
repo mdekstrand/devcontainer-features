@@ -1,0 +1,17 @@
+{
+  "id": "pixi",
+  "version": "0.1.0",
+  "name": "Pixi",
+  "options": {
+    "environment": {
+      "type": "string",
+      "description": "Pixi environment to install",
+      "proposals": [
+        "default",
+        "dev"
+      ],
+      "default": "default"
+    }
+  },
+  "postCreateCommand": "pixi install -e $ENVIRONMENT"
+}
