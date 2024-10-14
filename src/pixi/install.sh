@@ -9,5 +9,9 @@ GH_RELEASE_DL="https://github.com/${GH_REPO}/releases/latest/download/"
 
 FILE="pixi-${PIXI_ARCH}-unknown-linux-musl.tar.gz"
 
-mkdir -p "$HOME/.pixi/bin"
-curl -fsSL "$GH_RELEASE_DL/$FILE" | tar xvzf - -C "$HOME/.pixi/bin"
+mkdir -p /opt/pixi/bin
+curl -fsSL "$GH_RELEASE_DL/$FILE" | tar xvzf - -C /opt/pixi/bin
+
+cat >"/opt/pixi/config.toml" <<EOF
+detached-environments = "/opt/pixi/envs"
+EOF
