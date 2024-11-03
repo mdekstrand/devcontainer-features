@@ -13,7 +13,7 @@
       "default": "default"
     }
   },
-  "postCreateCommand": "pixi install",
+  "postCreateCommand": "pixi install -e $ENVIRONMENT",
   "containerEnv": {
     "PATH": "/opt/pixi/bin:${PATH}",
     "PIXI_HOME": "/opt/pixi"
